@@ -25,7 +25,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Loki",
+      "datasource": "loki",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -113,7 +113,7 @@
       }
     },
     {
-      "datasource": "Loki",
+      "datasource": "loki",
       "fieldConfig": {
         "defaults": {
           "custom": {}
