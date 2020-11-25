@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": 12019,
   "graphTooltip": 0,
-  "id": 26,
-  "iteration": 1605192664508,
+  "iteration": 1606337401287,
   "links": [],
   "panels": [
     {
@@ -28,7 +27,8 @@
       "datasource": "loki",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -55,9 +55,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -129,14 +130,15 @@
       "id": 2,
       "maxDataPoints": "",
       "options": {
-        "showLabels": false,
-        "showTime": true,
+        "showLabels": true,
+        "showTime": false,
         "sortOrder": "Descending",
         "wrapLogMessage": true
       },
       "targets": [
         {
-          "expr": "{namespace=\"$namespace\", instance=~\"$pod\"} |~ \"$search\"",
+          "expr": "{namespace=\"$namespace\", pod=~\"$pod\"} |~ \"$search\"",
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -162,6 +164,11 @@
       },
       "id": 4,
       "mode": "html",
+      "options": {
+        "content": "<div style=\"text-align:center\"> For Grafana Loki blog example </div>\n\n\n",
+        "mode": "html"
+      },
+      "pluginVersion": "7.1.0",
       "timeFrom": null,
       "timeShift": null,
       "title": "",
@@ -169,7 +176,7 @@
       "type": "text"
     }
   ],
-  "schemaVersion": 25,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -229,8 +236,8 @@
       {
         "current": {
           "selected": false,
-          "text": "level=warn",
-          "value": "level=warn"
+          "text": "",
+          "value": ""
         },
         "hide": 0,
         "label": null,
@@ -238,18 +245,18 @@
         "options": [
           {
             "selected": true,
-            "text": "level=warn",
-            "value": "level=warn"
+            "text": "",
+            "value": ""
           }
         ],
-        "query": "level=warn",
+        "query": "",
         "skipUrlSync": false,
         "type": "textbox"
       }
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
